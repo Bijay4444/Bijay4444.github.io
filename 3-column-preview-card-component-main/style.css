@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  /* primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /*paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: var(--very-light-gray);
+    margin-top: 8em;
+    font-size: 15px;
+}
+
+h1{
+    color: var(--very-light-gray);
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.8em;  
+}
+
+p{
+    text-align: left;
+    color: var(--very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 23ch;
+    line-height: 1.6;
+}
+
+img{
+    margin-bottom: 0.5em;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.box{
+    padding: 2em;
+    overflow: hidden;
+    width: 250px;
+    height: 450px;
+    color: white;
+}
+
+.orange-box{
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.blue-box{
+    background-color: var(--dark-cyan);
+}
+
+.green-box{
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.button{
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 5em;
+    text-align: center;
+    border-radius: 25px;
+    width: 7.5rem;
+    height: 2.5rem;
+    border:hsl(0, 0%, 95%);
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #e2e1dd;
+}
+
+.orange-button{
+    background-color: hsla(0, 0%, 100%, 0.75);
+    color: var(--bright-orange)
+}
+
+.blue-button{
+    background-color: hsla(0, 0%, 100%, 0.75);
+    color: var(--dark-cyan)
+}
+
+.green-button{
+    background-color: hsla(0, 0%, 100%, 0.75);
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 750px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .orange-box{
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 10px;
+    }
+    .green-box{
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 10px;
+    } 
+}
