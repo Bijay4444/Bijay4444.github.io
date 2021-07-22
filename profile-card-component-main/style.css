@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
+:root {
+  /* primary-colors */
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Neutral */
+  --Dark-gray: hsla(0, 0%, 59%, 0.479);
+}
+:root {
+  font-size: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(0, 11%, 12%);
+}
+
+section {
+  background-color: var(--Dark-cyan);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 350px;
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.card-header {
+  background-image: url(/images/bg-pattern-card.svg);
+  background-size: cover;
+  height: 150px;
+}
+
+.card-body {
+  padding: 0 20px 28px;
+}
+
+.image-holder {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 8px solid white;
+  overflow: hidden;
+  margin: -65px auto 30px auto;
+}
+
+.image-holder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.age,
+.city,
+.meta {
+  font-weight: 400;
+  color: hsl(0, 11%, 12%);
+  opacity: 0.6;
+}
+
+.name-age {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.age {
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.city {
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  border-top: 1px solid var(--Dark-gray);
+}
+
+.card-footer {
+  flex: 1;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.card-footer .item .value {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.card-footer .item .meta {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+/* background */
+
+.circles .c1,
+.circles .c2 {
+  position: absolute;
+  width: 900px;
+  height: auto;
+  animation: 2s circles forwards;
+  opacity: 0;
+}
+
+.circles .c1 {
+  top: -475px;
+  left: -155px;
+  transform: translate(-100px, -50px);
+}
+
+.circles .c2 {
+  top: 333px;
+  left: 775px;
+  transform: translate(100px, 50px);
+}
+
+@keyframes circles {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* for less than width of 800 px devices */
+@media screen and (max-width: 800px) {
+  /* background */
+
+  .circles .c1,
+  .circles .c2 {
+    position: absolute;
+    animation: 2s circles forwards;
+    opacity: 0;
+  }
+
+  .circles .c1 {
+    top: -513px;
+    left: -560px;
+    transform: translate(-100px, -50px);
+  }
+
+  .circles .c2 {
+    top: 350px;
+    left: 200px;
+    transform: translate(100px, 50px);
+  }
+
+  @keyframes circles {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
+/* for less than 400px devices */
+@media screen and (max-width: 800px) {
+    /* background */
+  
+    .circles .c1,
+    .circles .c2 {
+      position: absolute;
+      animation: 2s circles forwards;
+      opacity: 0;
+    }
+  
+    .circles .c1 {
+      top: -479px;
+      left: -684px;
+      transform: translate(-100px, -50px);
+    }
+  
+    .circles .c2 {
+      top: 380px;
+      left: 150px;
+      transform: translate(100px, 50px);
+    }
+  
+    @keyframes circles {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
