@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+:root {
+  /* Primary Colors*/
+
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral Colors*/
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Spartan', sans-serif;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+
+/* styling the top half of the page */
+.top__half{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6.5em;
+}
+
+.description{
+  max-width: 30rem;
+}
+
+.description h1{
+  font-family: 'Spartan', sans-serif;
+  font-size: xxx-large;
+  font-weight: bolder;
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 0;
+}
+
+.description p{
+  font-size: 0.9375em;
+  line-height: 3.5vh;
+}
+
+
+.reviews{
+  display: flex;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 0.41em;
+  height: 3em;
+  text-align: left;
+  width: 30em;
+  padding: 1em;
+  margin: 0em 2em 2em 2em;
+  font-weight: bold;
+}
+
+.report__guru{
+  margin-left: 5em;
+}
+
+.best__tech{
+  margin-left: 8em;
+}
+
+/* styling the bottom half of the page */
+.bottom__half{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0em 6em;
+}
+
+/* styling the cards */
+.card{
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  margin-right: 4em;
+  padding: 2em;
+  border-radius: 1em;
+  width: 30em;
+}
+
+q{
+  line-height: 1.55rem;
+}
+
+.card__top img{
+  border-radius: 50%;
+}
+
+.status{
+  color: var(--Soft-Pink);
+}
+
+.card__top{
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.name__status{
+  margin: 1em;
+}
+
+.name__status h4{
+  margin-top: 0.3em;
+}
+
+/* repositioning the cards */
+.second__card{
+  margin-top: 2em;
+}
+
+.third__card{
+  margin-top: 4em;
+}
+
+
+/* mobile design */
+@media(max-width: 930px){
+  body{
+    overflow: visible;
+    background-position: top, bottom;
+
+  }
+  /* styling top half of the page in mobile */
+
+  .top__half{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+  }
+
+  .description h1{
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .description p{
+    text-align: center;
+  }
+
+  .reviews{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 4em;
+    max-width: 23em;
+    margin: -1em 0em 2em 0em;
+  }
+  .report__guru{
+    margin-left: 0em;
+  }
+  
+  .best__tech{
+    margin-left: 0em;
+  }
+  
+
+  /* bottom part of the card */
+  .bottom__half{
+    flex-direction: column;
+  }
+
+  .card{
+    margin-right: 0em;
+    width: 23em;
+    padding: 1.5em;  
+  }
+  /* fixing the positioning of card */
+  .second__card{
+    margin-top: 1em;
+  }
+  .third__card{
+    margin-top: 1em;
+    margin-bottom: 4em;
+  }
+
+}
