@@ -1,0 +1,159 @@
+/* regular */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+/* bold */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p{
+    font-size: 1.1em;
+    color: var(--Desaturated-blue);
+    max-width: 20rem;
+    line-height: 1.5em;
+}
+
+h1{
+    font-weight: 700;
+}
+
+body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url(images/pattern-background-desktop.svg) no-repeat fixed 0 -5em;
+    background-color: var(--Pale-blue);
+    background-size: 100%;
+    font-family: 'Red Hat Display', sans-serif;;
+}
+
+.card__main{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    margin-top: 6em;
+    height: 35em;
+    width: 25em;
+    border-radius: 15px;
+}
+
+.card__top__half img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card__top__half{
+    margin-top: -7.5em; 
+}
+
+.subscription{
+    background-color: var(--Very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+}
+
+/* fixing the left and right position of the div in subscription*/
+.left{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.right a{
+   font-weight: 600;
+   display: flex;
+   margin-right: 1em;
+}
+
+.left ul{
+    list-style: none;
+    margin-left: -1em;
+}
+
+#highlighted{
+    font-weight: 700;
+}
+
+#colored{
+    color: var(--Desaturated-blue);
+}
+
+/* image fixing with circle */
+.circle img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-left: 0.5em;
+}
+
+.card__bottom__half{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: -4em;
+}
+
+/* styling the buttons */
+.payment__button button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    background-color: var(--Bright-blue);
+    box-shadow: 0 24px 16px 0 hsla(245, 75%, 52%, 0.247);
+    text-align: center;
+    color: white;
+    margin-left: 0em;
+    padding: 0.9em;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.cancel__button button{
+    margin: 2em;
+    border: none;
+    background-color: white;
+    text-align: center;
+    color: var(--Desaturated-blue);
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-image: none;
+    }
+}
